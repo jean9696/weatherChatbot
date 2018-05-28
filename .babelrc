@@ -1,0 +1,16 @@
+{
+  "presets": ["flow", "es2015", "env"],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "test": "./test"
+      }
+    }]
+  ]
+}

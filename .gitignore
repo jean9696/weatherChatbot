@@ -1,0 +1,6 @@
+node_modules/
+yar-error.log
+.nyc_output/
+coverage/
+lib/
+package-lock.json
