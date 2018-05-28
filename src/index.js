@@ -44,10 +44,8 @@ exports.weather = (req: $Request, res: $Response): Promise<Object> => {
 
   if (typeof city !== 'string') {
     res.json({ fulfillmentText: 'Could you please tell me for what location you want to know the weather ?' });
-    res.end();
   } else if (!momentDate.isValid()) {
     res.json({ fulfillmentText: `Could you please tell me for when you want to know the weather in ${city}` });
-    res.end();
   } else {
     return callWeatherApi(city, stringDate, wwoApiKey).then((output) => {
       res.json({ fulfillmentText: output });
